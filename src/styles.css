@@ -12,3 +12,10 @@
 .grid-cell {
     user-select: none;
 }
+
+/* Highlight on hover ==========================================*/
+
+.hovered {
+    background-color: black;
+}
+
