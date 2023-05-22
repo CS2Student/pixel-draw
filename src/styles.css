@@ -1,0 +1,14 @@
+
+
+
+/* Grid ==========================================*/
+.grid {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.grid-cell {
+    user-select: none;
+}
