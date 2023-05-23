@@ -15,12 +15,21 @@ const colorSetting = document.getElementById('colorSetting');
 const eraserSetting = document.getElementById('eraserSetting');
 const clearSetting = document.getElementById('clearSetting');
 const sizeSetting = document.getElementById('sizeSetting');
+const sizeValue = document.getElementById('sizeValue');
+
 
 colorSetting.onclick = (e) => {
     currentColor = e.target.value;
 }
 
 clearSetting.onclick = () => {
+    grid.innerText = '';
+    createCanvas(size);
+}
+
+sizeSetting.oninput = (e) => {
+    size = e.target.value;
+    sizeValue.innerText = `${size} x ${size}`;
     grid.innerText = '';
     createCanvas(size);
 }
