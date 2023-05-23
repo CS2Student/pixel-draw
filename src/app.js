@@ -1,14 +1,30 @@
-const grid = document.getElementById('grid');
+const DEFAULT_COLOR = 'white';
+const DEFAULT_MODE = 'paint';
+const DEFAULT_SIZE = 16;
+const DEFAULT_MOUSE_STATUS = false;
 
-let currentColor = 'white';
-let currentMode = 'paint';
-
-/* Create 16x16 canvas */
-
-let size = 16;
-let isMouseDown = false;
+let currentColor = DEFAULT_COLOR;
+let currentMode = DEFAULT_MODE;
+let size = DEFAULT_SIZE;
+let isMouseDown = DEFAULT_MOUSE_STATUS;
 document.body.onmousedown = () => (isMouseDown = true);
 document.body.onmouseup = () => (isMouseDown = false);
+
+const grid = document.getElementById('grid');
+const colorSetting = document.getElementById('colorSetting');
+const eraserSetting = document.getElementById('eraserSetting');
+const clearSetting = document.getElementById('clearSetting');
+const sizeSetting = document.getElementById('sizeSetting');
+
+colorSetting.onclick = (e) => {
+    currentColor = e.target.value;
+}
+
+clearSetting.onclick = () => {
+    grid.innerText = '';
+    createCanvas(size);
+}
+
 
 function createCanvas(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -49,4 +65,6 @@ function changeColor(e) {
 
 }
 
+
+/* MAIN */
 createCanvas(size);
