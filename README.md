@@ -1,3 +1,5 @@
 # pixel-draw
 
-Pixel canvas built using HTML, CSS, and JavaScript
+Pixel Drawing Canvas built using HTML, CSS, and JavaScript
+
+[Demo]();
