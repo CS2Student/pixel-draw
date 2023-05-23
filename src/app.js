@@ -20,6 +20,15 @@ const sizeValue = document.getElementById('sizeValue');
 
 colorSetting.onclick = (e) => {
     currentColor = e.target.value;
+    currentMode = 'paint';
+    colorSetting.style.backgroundColor = 'pink';
+    eraserSetting.style.backgroundColor = 'white';
+}
+
+eraserSetting.onclick = () => {
+    currentMode = 'erase';
+    eraserSetting.style.backgroundColor = 'pink';
+    colorSetting.style.backgroundColor = 'white';
 }
 
 clearSetting.onclick = () => {
