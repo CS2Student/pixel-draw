@@ -19,6 +19,7 @@ function createCanvas(size) {
         cell.classList.add('grid-cell');
         
         cell.addEventListener('mouseover', changeColor);
+        cell.addEventListener('mouseout', changeColor);
         cell.addEventListener('mousedown', changeColor);
 
         grid.appendChild(cell);
@@ -28,15 +29,21 @@ function createCanvas(size) {
 function changeColor(e) {
     const eventTarget = e.target;
     const eventType = e.type;
-    isMouseDown = true;
 
     if (eventType === 'mouseover' && eventType !== 'mousedown') {
-        eventTarget.style.backgroundColor = 'pink';
+        eventTarget.classList.add('hovered');
+    }
+
+    if (eventType === 'mouseout') {
+        eventTarget.classList.remove('hovered');
     }
 
     if (isMouseDown === true) {
         if (currentMode === 'paint') {
             eventTarget.style.backgroundColor = 'black';
+        }
+        if (currentMode === 'erase') {
+            eventTarget.style.backgroundColor = 'white';
         }
     }
 

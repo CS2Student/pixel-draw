@@ -16,6 +16,6 @@
 /* Highlight on hover ==========================================*/
 
 .hovered {
-    background-color: black;
+    background-color: pink !important;
 }
 
