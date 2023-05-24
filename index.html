@@ -8,21 +8,19 @@
 
         <script src="src/app.js" defer></script>
         <link rel="stylesheet" href="src/styles.css">
-        
+
     </head>
     <body>
-        <div class="settings" id="settings">
-            <button id="colorSetting">Color</button>
-            <button id="eraserSetting">Eraser</button>
-            <button id="clearSetting">Clear</button>
-            <input type="range" min="1" max="100" value="16" class="slider" id="sizeSetting">Size</input>
-            <p id="sizeValue">16 x 16</p>
-        </div>
-
-
-
-        <div class="grid" id="grid">
-
+        <div class="flex-container">
+            <h1>Pixel Draw</h1>
+            <div class="grid" id="grid"></div>
+            <div class="settings" id="settings">
+                <button id="colorSetting">Color</button>
+                <button id="eraserSetting">Eraser</button>
+                <button id="clearSetting">Clear</button>
+                <input type="range" min="1" max="100" value="16" class="slider" id="sizeSetting"></input>
+                <p id="sizeValue">16 x 16</p>
+            </div>
         </div>
 
     </body>
