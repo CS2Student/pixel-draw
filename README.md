@@ -1,5 +1,5 @@
-# pixel-draw
+#Pixel Draw
 
-Pixel Drawing Canvas built using HTML, CSS, and JavaScript
+Simple 8-bit style drawing tool built using HTML, CSS, and JavaScript
 
 [Demo]();
