@@ -1,6 +1,10 @@
 :root {
     --main-color: #fefefe;
     --bg-color: #F2F3F5;
+
+    --button-main: #e1ecf4;
+    --button-border: #7aa7c7;
+    --button-hover: #a0c7e4;
 }
 
 body {
@@ -16,25 +20,39 @@ body {
     flex-wrap: wrap;
 }
 
+/* Settings ==========================================*/
+
 .settings button {
-    background-color: #e1ecf4;
+    background-color: var(--button-main);
     border-radius: 3px;
-    border: 1px solid #7aa7c7;
+    border: 1px solid var(--button-border);
     padding: 8px .8em;
     user-select: none;
+    cursor: pointer;
 }
 
 .settings button:active {
-  background-color: #a0c7e4;
+  background-color: var(--button-hover);
   box-shadow: none;
   color: #2c5777;
+}
+
+.settings .slider {
+    margin-top: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: var(--button-main);
+    border-radius: 3px;
+    border: 1px solid var(--button-border);
+    color: black;
+    stroke: pink;
 }
 
 /* Grid ==========================================*/
 .grid {
     display: grid;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     background-color: var(--main-color);
     margin-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
@@ -47,7 +65,7 @@ body {
 /* Highlight on hover ==========================================*/
 
 .hovered {
-    background-color: pink !important;
+    background-color: var(--button-border) !important;
 }
 
 .settings button {

@@ -83,6 +83,5 @@ function changeColor(e) {
 
 }
 
-
 /* MAIN */
 createCanvas(size);
